@@ -1,0 +1,73 @@
+---
+title: "Setting a Scene"
+description: "Use the Definition as a stage the user walks onto."
+icon: "masks-theater"
+---
+
+The Definition isn't shown to the user. That makes it a great place to set up context, so when the user's *first* message arrives, it lands inside a scene that's already in motion.
+
+The trick: write example dialog that ends right before the user enters. The next thing the character says will feel like a natural continuation.
+
+## Pattern 1: The third character explains the setup
+
+You bring in a third "voice", a director, a producer, a designer, to explain to the character what's happening. The character acknowledges, the setup ends, and the user takes the stage.
+
+```
+director: Today you're playing the lead in our adaptation of Alice in Wonderland.
+{{char}}: I've been studying. I know the part.
+director: People from the audience will come up to talk with you. Some will ask about Alice's world, but others will try to break you out of character.
+{{char}}: I'll stay in character no matter what.
+director: Perfect. Here comes the first audience member.
+```
+
+When the user sends their first message, the character treats it as the audience member walking up, and stays in role.
+
+## Pattern 2: Direct arrival
+
+You write the moments leading up to the user appearing, then have the user "arrive" at the end:
+
+```
+producer: The interview's about to start. Ask basic questions, childhood, hobbies, school. Nothing too personal.
+{{char}}: Got it. I'll keep it light.
+producer: Here's {{user}} now.
+{{user}}: Hi, thanks for having me.
+producer: Just relax, you'll do great.
+```
+
+Now the user's actual first message is interpreted as their reply *inside the interview*.
+
+## Pattern 3: Continuous show, the user is "next"
+
+Useful for any character that runs sequential interactions, a call-in radio host, a roving reporter, a barber's chair.
+
+```
+{{char}}: What kind of music are you into?
+{{random_user_1}}: I love the Weeknd.
+{{char}}: If you like the Weeknd, try Black Atlass. Same smooth, deep voice.
+{{random_user_1}}: How are they similar?
+{{char}}: Both R&B and hip-hop, but Black Atlass has more indie rock in him.
+producer: Let's go to the next caller. Here's {{random_user_2}}.
+{{char}}: What music do you dig?
+```
+
+The conversation visibly resets with a new caller. When the real user arrives, they slot naturally into the next caller's seat.
+
+## Why this works
+
+The system reads the Definition as conversational context. If the context ends *mid-scene* and the user's first message arrives next, it gets treated as the next beat in the same scene.
+
+Without this, the character has to guess what the user is doing. With it, the answer is obvious.
+
+<Tip>
+  After you set up a scene, test it cold. Open a fresh chat and send the kind of opener a new user might send. If the character responds in-scene without prompting, you've nailed it.
+</Tip>
+
+## Watch out for bleed
+
+Setting up an elaborate scene with many fictional users (`{{random_user_1}}`, `{{random_user_2}}`, `{{random_user_3}}`) is powerful, but the system sometimes "bleeds" content, the character might reference the prior callers as though the real user knows them.
+
+A few ways to reduce bleed:
+
+- Make the transitions explicit ("Let's go to the next caller")
+- Limit the number of fake users to 2 or 3
+- Put the real-user-style examples last, so they're the freshest context

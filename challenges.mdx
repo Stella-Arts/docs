@@ -1,0 +1,84 @@
+---
+title: "Challenges and Limitations"
+description: "Things that are hard or impossible right now, and how to work around them."
+icon: "triangle-exclamation"
+---
+
+Sutorichat is powerful, but it isn't magic. Some things are still hard. Here are the most common ones and how to work around them.
+
+<Note>
+  This list reflects the system as it stands today. The model improves over time, and what's a limitation now may not be next month. When something doesn't work the way you expect, try again in a few weeks.
+</Note>
+
+## Text challenges
+
+### Memory
+
+As a conversation grows, the character can forget details from earlier turns, especially things that weren't repeated. If something is important, mention it again.
+
+**Workaround:** put critical facts about the character (backstory, setting, rules) into the Definition, not just into the opening greeting. The Definition stays in context longer than a single user message.
+
+### Factuality
+
+Characters make things up. Confidently. If your character recommends a real book, real medication, or real legal advice, double-check it. Don't trust it as a source.
+
+**Workaround:** for characters where factual accuracy matters (tutors, advisors), include a note in the greeting like "I may get details wrong, verify anything important."
+
+### Drift under pressure
+
+Even with careful Negative Guidance, a determined user can sometimes push a character out of its lane. The system is designed to be cooperative, which means it tends to follow the user's lead.
+
+**Workaround:** more example dialogs in the Definition showing the character *recovering* from off-topic prompts. Reinforce the desired behavior with multiple examples.
+
+### Tone consistency
+
+A character can wobble in tone across a long conversation, getting more formal, more casual, more verbose, depending on the user.
+
+**Workaround:** in example dialogs, show the character maintaining their tone across different user styles.
+
+### Length consistency
+
+Characters often default to slightly verbose responses. If you want a terse character, demonstrate it explicitly in the Definition, multiple example responses that are 1–2 sentences max.
+
+## Image challenges
+
+### Consistency across images
+
+The single biggest image issue. The same character can look different from image to image, different hair, eyes, age, outfit. See the [Consistency](/images/consistency) page for the standard workaround (a verbatim anchor phrase).
+
+### Detail quality
+
+Fine details, fingers, complex jewelry, text on signs, exact tattoos, are unreliable. Models still struggle here.
+
+**Workaround:** avoid asking for tight detail close-ups. Medium shots and wider tend to look much better.
+
+### Pop culture rendering
+
+The system's visual vocabulary doesn't always match its textual vocabulary. You can chat with a character who clearly knows a movie, but image generation might not be able to depict its specific characters or visual style accurately.
+
+**Workaround:** describe characters by their *visual traits* rather than by name. Instead of "Sherlock Holmes," try "a tall lean man in a deerstalker hat, holding a pipe, Victorian London."
+
+### Style mixing
+
+Putting too many styles in one prompt (`oil painting anime watercolor photograph`) produces muddy results. Pick one primary style.
+
+### Text in images
+
+Words on signs, book titles, labels, usually unreadable or wrong. If text matters, design around it, not into it.
+
+## Platform-level moderation
+
+Some content is filtered platform-wide. This is non-negotiable and not something you can work around in the Definition or Image Style.
+
+If a generated image is rejected or a response is sanitized, it's usually a moderation pass, not a creative failure. Adjust the request to fit the policy.
+
+## What to do when something seems broken
+
+1. **Wait and try again.** A single bad output isn't necessarily a pattern, try swiping for an alternate.
+2. **Edit the Definition.** Add an example that shows the *right* behavior in the same situation that's failing.
+3. **Simplify.** Long, complicated prompts often produce worse results than short, focused ones.
+4. **Report it.** If a character is doing something seriously wrong, going off the rails, ignoring safety, producing harmful content, use the Report button. Even if the Definition is private, your report gets reviewed.
+
+<Tip>
+  Don't fight the system. If something keeps failing the same way after three tries, change your approach instead of repeating it harder. The shape of the prompt is usually the issue.
+</Tip>

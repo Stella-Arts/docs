@@ -1,0 +1,56 @@
+---
+title: "Character Attributes"
+description: "Every field you can fill in on a character, and what each one does."
+icon: "list"
+---
+
+This section is a reference. If you're looking for a step-by-step walkthrough, start at [Quick Creation](/quickstart) instead.
+
+A character is defined by a stack of fields. Most are optional, supplying more isn't always better, it depends on what kind of character you're building. A famous figure may need almost nothing; a custom game-master character may need every field filled.
+
+## The fields
+
+<CardGroup cols={2}>
+  <Card title="Name" icon="signature" href="/attributes/name">
+    Required. How users see and find the character.
+  </Card>
+  <Card title="Avatar" icon="user" href="/attributes/avatar">
+    The image next to every message.
+  </Card>
+  <Card title="Greeting" icon="comment" href="/attributes/greeting">
+    The first thing the character says. Required for Quick Creation.
+  </Card>
+  <Card title="Short Description" icon="quote-left" href="/attributes/short-description">
+    One-line tagline shown under the name.
+  </Card>
+  <Card title="Long Description" icon="align-left" href="/attributes/long-description">
+    A short paragraph in the character's voice.
+  </Card>
+  <Card title="Categories" icon="tags" href="/attributes/categories">
+    Tags that help users discover the character.
+  </Card>
+  <Card title="Visibility" icon="eye" href="/attributes/visibility">
+    Who can chat with the character, and who can see the Definition.
+  </Card>
+  <Card title="Definition" icon="book" href="/attributes/definition">
+    The big field. Example dialogs, scene-setting, voice training.
+  </Card>
+</CardGroup>
+
+## What each field does
+
+| Field | Required | Max length | Affects behavior? |
+| --- | --- | --- | --- |
+| Name | Yes | 20 | Strongly |
+| Greeting | Yes (Quick) | 500 | Strongly |
+| Avatar | No |, | Visually only |
+| Short Description | No | 50 | Mildly |
+| Long Description | No | 500 | Moderately |
+| Categories | No | 3 tags | Discovery only |
+| Visibility | Yes |, | Access only |
+| Image Style | No | 100 | Visually |
+| Definition | No | 32,000 | Strongly |
+
+<Tip>
+  Most characters never need a full Definition. A great Name + Greeting + Long Description will carry you a long way.
+</Tip>

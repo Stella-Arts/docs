@@ -1,0 +1,98 @@
+---
+title: "Formatting"
+description: "Markdown, emojis, parentheticals, and other ways to shape how messages look."
+icon: "text-size"
+---
+
+Sutorichat renders Markdown in every message, yours, the user's, and the character's. You can use that to give your character a recognizable visual rhythm.
+
+## Markdown
+
+The basics work as expected:
+
+| Syntax | Result |
+| --- | --- |
+| `**bold**` | **bold** |
+| `*italic*` | *italic* |
+| `` `code` `` | `code` |
+| `~strike~` | ~~strike~~ |
+| `# Heading` | Large heading |
+| `##### Smallest heading` | Tiny heading |
+
+Multi-line code blocks use three backticks:
+
+````
+```
+multi-line
+code block
+```
+````
+
+You can use Markdown freely in:
+
+- The greeting
+- The long description
+- The Definition (including inside example dialogs)
+- Image styles
+- The character's actual responses, which the model is more likely to use if you demonstrate it in examples
+
+## Emojis
+
+Emojis render just fine. Type them directly (`🎲`, `😊`) or by name in supported shorthand (`:smile:` becomes 😊). They work in greetings, descriptions, and Definitions.
+
+A character that uses emojis liberally in its greeting will tend to use them in responses too, emoji habits carry over.
+
+## Parenthetical stage directions
+
+A common pattern for roleplay and adventure characters: put actions in parentheses or italics, dialogue in plain text.
+
+Parenthesis version:
+
+```
+{{char}}: The mutants are coming! (opens the hatch with the remote panel)
+{{user}}: Sure (steps inside)
+{{char}}: (a bat swoops down at {{user}}) Shoot it!
+{{user}}: ({{user}} picks up the side gun and fires)
+```
+
+Italics version:
+
+```
+{{char}}: *opens the hatch* The mutants are coming!
+{{user}}: *steps inside* Now what?
+{{char}}: *a bat swoops down* Shoot it!
+```
+
+Both work. Italics tend to read more like narrative prose; parentheses read more like a screenplay.
+
+<Tip>
+  Pick one and stick with it. Mixing the two in the same character looks sloppy and confuses the model about which it should generate.
+</Tip>
+
+## Quotation marks for spoken lines
+
+Another approach, more novelistic:
+
+```
+{{char}}: I lean around the corner, gripping the lantern. "Who goes there?"
+```
+
+This works well for characters whose responses read like prose with embedded dialogue. Picked up by writers, narrators, and dungeon-master-style characters.
+
+## Languages and mixed languages
+
+Sutorichat handles many languages and dialects, not just English. If you write your Greeting and Definition in another language, the character will start the conversation in that language.
+
+You can also *mix* languages on purpose, which is great for tutors:
+
+```
+{{char}}: Hola. How old are you? Cuantos años tienes?
+{{random_user_1}}: Tengo twenty-one años.
+{{char}}: Excellente. Ahora, let's practice ordering comida in a café.
+```
+
+Mix freely in greetings and example dialogs to teach a code-switching style.
+
+<Note>
+  Once a user starts chatting in a different language than the character was set up in, the character will usually follow them. That's by design, it makes for friendlier conversations, but it does mean you can't lock a character to a single language through the Definition alone.
+</Note>

@@ -1,0 +1,44 @@
+---
+title: "Hidden Descriptions"
+description: "Generate images without showing the prompt to the user."
+icon: "eye-slash"
+---
+
+By default, the italicized image description shows up in the chat alongside the image. The user reads `*A brown pug rolling in the grass*` *and* sees the picture.
+
+That's often desirable, it adds narrative texture. But sometimes you want the image without the description.
+
+## The setting
+
+In the character editor, toggle **Hide Direct Image Descriptions**. When it's on, the system extracts the italicized prompt, generates the image, and then strips the italics from the displayed text.
+
+## When to hide
+
+A few cases:
+
+- **Mystery and reveal.** The image is meant to be a surprise. Showing the description as text ruins it. ("A futuristic helmet that vaporizes your hair", much funnier as a picture than as a label.)
+- **Comedy.** The discrepancy between what the character *says* and what the image *shows* can be the joke. Hide the description and let the visual land cold.
+- **Clean storytelling.** For book-like or screenplay-like characters, image descriptions feel like stage directions cluttering the prose.
+
+## When to keep them visible
+
+- **Tutorials and onboarding.** Showing the description helps users understand what's possible.
+- **Narrative descriptions.** Some characters' italicized descriptions are *part* of the writing, atmospheric prose about a scene. Hiding them removes a lot of charm.
+- **Educational characters.** A drawing teacher might want to show how they think about a composition.
+
+## How it works with multiple descriptions
+
+If your character produces more than one italicized segment, all of them are hidden when the toggle is on. The image generator still tries to combine them.
+
+## How it interacts with other italics
+
+Important: this toggle hides *all* italicized text. If your character uses italics for stage directions (`*walks to the door*`), those will also be hidden. You can't mix hidden image descriptions with visible italic stage directions.
+
+Two ways around that:
+
+1. **Use parentheses for stage directions, italics only for image prompts.** Each shape has one job.
+2. **Leave the toggle off and let descriptions show.** Treat the italicized text as part of the prose, which means writing it well enough to be enjoyable to read.
+
+<Tip>
+  Toggle this on for character types where the image is the punchline. Leave it off for character types where the image is the illustration.
+</Tip>

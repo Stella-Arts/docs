@@ -1,81 +1,85 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
-icon: 'rocket'
+title: "Quick Creation"
+description: "Make a character in under a minute. Three fields, one save, and you're chatting."
+icon: "rocket"
 ---
 
-## Get started in three steps
+Quick Creation is the fastest way to bring a character to life. You only need three things: a **name**, a **greeting**, and (optionally) an **avatar**. Everything else can be added later.
 
-Get your documentation site running locally and make your first customization.
+## Pick a concept
 
-### Step 1: Set up your local environment
+Characters can be *anything*, a person, a creature, an object, a place, a feeling. Some ideas to get you started:
 
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
+- A character from a book, movie, or game
+- A historical figure
+- A family pet, or your own pet if it could talk
+- A household object with an attitude (a coffee maker that's tired of you, a fridge that judges your snacks)
+- An emotion or abstract concept (Monday Morning, Stage Fright)
+- An expert at something you want to learn
 
-### Step 2: Deploy your changes
+Before you fill anything in, imagine the first thing this character would say to a stranger. That sentence becomes your greeting.
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+## Open the creator
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+From any screen in Sutorichat, tap **+ Create**, then **Create a Character**.
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+You'll see a screen with fields for Name, Greeting, Avatar, and a few optional extras. For Quick Creation, the first three are what matters.
 
-### Step 3: Go live
+## Name
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+The name is what users see in chat and on the home page. It can be:
+
+- A single name, `Sarah`, `Chippy`
+- A full name, `Albert Einstein`, `Lin Manuel Miranda`
+- A handle, `WhoWouldWin`, `BoardWizard`
+
+<Note>
+  Names must be 3–20 characters. Letters, numbers, spaces, dashes, and underscores only.
+</Note>
+
+If your character is famous (a real person, a well-known fictional figure, a brand), the name alone does a lot of the work. The system has seen Sherlock Holmes thousands of times in training, you barely need to describe him. If your name is more generic ("Mary," "Bob"), lean harder on the greeting.
+
+## Greeting
+
+The greeting is the first thing the character says when someone starts a new chat. It does two jobs at once:
+
+1. **Establishes who the character is.** Voice, mood, vocabulary, formality, all of it leaks out in the first sentence.
+2. **Tells the user what to do.** A good greeting hints at what kind of conversation to have.
+
+A weak greeting: `Hi, how can I help you today?`
+
+A strong greeting: `*adjusts welding goggles* You here about the carburetor or just to chat? Either's fine, but pull up a stool either way.`
+
+The second one tells you the character is a mechanic, that they speak in fragments with stage directions, that they're gruff but not unfriendly, and that you can either ask about cars or just hang out. All in one line.
+
+<Tip>
+  You can reference the user's name in the greeting with `{{user}}`. Example: `Hello {{user}}, finally, I've been waiting all morning.`
+</Tip>
+
+## Avatar
+
+The avatar shows up next to every message your character sends. You can:
+
+- **Upload an image**, square (512×512) PNG, JPG, or GIF works best
+- **Generate one**, describe the character and Sutorichat will draw an avatar
+
+The avatar is cropped to a circle in chat and shown as a square on character cards. Make sure the subject is centered.
+
+<Warning>
+  Avatars are run through moderation. Anything that violates the content policy will be rejected.
+</Warning>
+
+## Save and chat
+
+Hit **Save**. You're done. The character is now live, and you can start a conversation immediately.
 
 ## Next steps
 
-Now that you have your docs running, explore these key features:
+After a few exchanges, open the character settings and start filling in more:
 
-<CardGroup cols={2}>
+- A **Short Description** so people understand the character at a glance
+- A **Long Description** in the character's own voice
+- An **Image Style** if you want consistent visuals across messages
+- A **Definition** if you want to teach the character a specific pattern of speech
 
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
-
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
-</CardGroup>
-
-<Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
-</Note>
+Each of these has its own page in the [Attribute Reference](/attributes/overview).

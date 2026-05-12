@@ -1,0 +1,113 @@
+---
+title: "Common Pitfalls"
+description: "Mistakes that produce ugly, off-model, or confusing images, and how to fix them."
+icon: "triangle-exclamation"
+---
+
+A grab-bag of the most common image problems and their usual fixes.
+
+## "The character keeps having extra fingers / weird hands"
+
+Hands are the hardest thing for image models. Tips that help:
+
+- Avoid close-ups of hands when you can. `Medium shot` framing tends to render hands more loosely (and therefore more believably).
+- Skip describing hands in the prompt. Mentioning hands often draws the model's attention to them, which makes the problem worse, not better.
+- If hands matter, use generic actions: `hands clasped`, `arms folded`, `holding a mug`. Specific finger counts and gestures usually fail.
+
+## "The image is too dark / washed out / muddy"
+
+Almost always a lighting problem. Add a specific lighting term to the prompt:
+
+- Dark image → add `softly lit`, `well-lit`, `golden hour`, `bright daylight`
+- Washed out → add `rich color`, `vibrant`, `high contrast`
+- Muddy → drop adjectives, simplify the description, or add `clean composition`
+
+## "The character looks different every time"
+
+Read [Consistency](/images/consistency). Short answer: write a visual anchor phrase and use it verbatim every time.
+
+## "The image doesn't match what the character is saying"
+
+If you're using [Inferred descriptions](/images/direct-vs-inferred), this happens a lot. The fix is to switch to Direct, write the image prompt yourself, in italics, as part of the response.
+
+## "The prompt is in the description, but no image was generated"
+
+A few things to check:
+
+1. Image generation is **enabled** in the character editor.
+2. The prompt is in **italics** using `*single asterisks*`, not bold `**double asterisks**`.
+3. The italicized text isn't empty (a stray `**` mid-sentence can break it).
+
+## "Multiple things in the description and only one shows up"
+
+If your prompt is `A red fox and a blue raven on a snowy log`, the model will sometimes only render one of them. The fix:
+
+- Specify the relationship explicitly: `A red fox standing next to a blue raven on a snowy log`
+- Add a count: `Two animals on a log, a red fox and a blue raven`
+- Put the more important one first
+
+## "I want photorealism but it keeps coming out cartoony"
+
+Pick a *specific* photorealistic style at the end of the prompt:
+
+- `Photorealistic, 35mm film, cinematic`
+- `Editorial photography, studio lighting`
+- `Documentary photo, candid, natural light`
+
+The word "photorealistic" alone is often outvoted by other words in the prompt. Anchor it.
+
+## "I want anime but it keeps coming out generic"
+
+Similar problem. Be specific:
+
+- `Modern anime, Kyoto Animation style`
+- `90s anime, hand-drawn cel art`
+- `Ghibli-inspired watercolor`
+
+`Anime` alone is too broad. Pick an era and a studio aesthetic.
+
+## "The text in the image is gibberish"
+
+Image models can't reliably render readable text. If you need real words (a sign, a book title), most of the time the text will be unreadable or wrong. Either accept it as a stylistic choice or avoid requesting text.
+
+## "The character keeps facing the wrong direction"
+
+Add specific direction language:
+
+- `Facing the camera`
+- `Looking over her shoulder`
+- `Three-quarter view`
+- `Profile shot, looking left`
+
+## "The image has the wrong perspective / scale"
+
+Common when you describe two things of very different sizes. Be explicit:
+
+- `A tiny dragon the size of a housecat, perched on a stack of books`
+- `A massive whale, dwarfing the small boat in the foreground`
+
+Without scale words, the model averages, and a dragon usually ends up dragon-sized.
+
+## "The style is too dominant, I can't see what's happening"
+
+Some style keywords (especially named artists) overwhelm the subject. Try:
+
+- Removing the artist name and using descriptive words instead (`oil painting, dramatic lighting` instead of `in the style of [Artist]`)
+- Putting the style *last* in the prompt instead of first
+
+## "Every image has the same pose"
+
+This happens when an example dialog in the Definition demonstrates a specific pose, and the model latches onto it. Add example dialogs with *different* poses to give it more variety to pull from.
+
+## "The character keeps adding things I didn't ask for"
+
+The model "creatively" embellishes when descriptions are short. Either:
+
+- Lengthen the description with constraints (`only a wooden chair, nothing else in the room`)
+- Shorten the description radically (sometimes giving the model less to fill in produces a cleaner image)
+
+Both can work. Experiment.
+
+<Tip>
+  When an image goes wrong, try the smallest possible edit first. Change one word, swap one keyword, remove one detail. Big rewrites often introduce new problems.
+</Tip>

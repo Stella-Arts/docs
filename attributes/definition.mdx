@@ -1,0 +1,65 @@
+---
+title: "Definition"
+description: "The big free-form field. Example dialogs, scene-setting, voice training, behavior patterns."
+icon: "book"
+---
+
+**Optional.** Up to 32,000 characters.
+
+The Definition is where you take the gloves off. It's a single, large text field where you can put example dialogs, backstory, scene descriptions, behavior rules, image guidance, anything text-based that the character should "know" about itself.
+
+Most characters don't need one. A great Greeting and Long Description will carry a Quick character a long way. You should reach for the Definition when:
+
+- The character has a very specific way of speaking that isn't coming through
+- You want to enforce a strict format (a game, a quiz, a recurring pattern)
+- The character needs to know facts that aren't well-known (a custom world, a personal backstory)
+- You want to provide example image descriptions for image-generating characters
+
+## The most common format: example dialogs
+
+The most useful thing you can put in the Definition is *examples of the character talking*. The format is:
+
+```
+name: what they said
+```
+
+Each message is a name, a colon, a space, then the text. Multi-line messages are fine, they continue until the next `name:` line.
+
+Example, from a board-game-recommendation character:
+
+```
+{{char}}: Welcome fellow board gamer, happy to help with recommendations, home-rule tweaks, or strategy advice. Your move!
+{{random_user_1}}: We like Catan but it's getting old. Something with more strategy?
+{{char}}: Big jump or small? If you want a clean step up, try Carcassonne. If you're ready for something heavier, Terraforming Mars.
+```
+
+## Variables
+
+A few placeholders the system recognizes:
+
+| Variable | What it means |
+| --- | --- |
+| `{{char}}` | Your character's name. If you rename the character later, you don't have to update the Definition. |
+| `{{user}}` | Whoever is chatting with the character right now. |
+| `{{random_user_1}}`, `{{random_user_2}}`, ... | Fake user names. Use these in example dialogs to signal "this is just an example, not the real user." Same number = same fake person; different numbers = different fake people. |
+
+Use `{{random_user_N}}` in example dialogs so the system understands those conversations are *training examples*, not the current chat. Otherwise the character might think "Robert" is its current user when Robert was just a name you made up.
+
+## Order matters
+
+If your Definition is long, **put the most important parts at the top**. As conversations get longer, the system has to fit everything into a limited working memory, and the end of the Definition is the first thing to get truncated.
+
+## What doesn't work
+
+- **Links**, listing URLs doesn't load external content. The system won't follow links. (A link to a Wikipedia page might give a faint hint via the URL text, but don't count on it.)
+- **Strict programming**, the Definition isn't code. You can't write `if user_says_X then respond_with_Y`. Use example dialogs instead.
+- **Hard rules**, even with explicit "never do X" instructions, the system will sometimes drift if the user pushes. Negative guidance helps; it's not a hard guarantee.
+
+## Where to go next
+
+The [Advanced Creation](/advanced/overview) section has a deep dive on patterns that work in the Definition:
+
+- [Dialog format](/advanced/dialog-format), the syntax in detail
+- [Setting a scene](/advanced/setting-a-scene), how to use the Definition as a stage
+- [Negative guidance](/advanced/negative-guidance), keeping characters on track
+- [Unusual patterns](/advanced/unusual-patterns), games, formats, and rare voices

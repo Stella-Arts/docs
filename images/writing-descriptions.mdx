@@ -1,0 +1,136 @@
+---
+title: "Writing Image Descriptions"
+description: "The single most important skill for image-generating characters. How to write prompts that produce the image you actually want."
+icon: "pen"
+---
+
+Almost every image problem traces back to the same root cause: the description was too vague, too long, or in the wrong order.
+
+This page is a deep dive. If you only read one image page, read this one.
+
+## The anatomy of a good description
+
+Every strong image description has the same five ingredients, in roughly this order:
+
+1. **Subject**, who or what is in the image
+2. **Action / pose**, what they're doing
+3. **Environment**, where they are
+4. **Lighting and mood**, the feeling of the scene
+5. **Style and quality**, how the image should be rendered
+
+In description form:
+
+```
+A young chef in a white apron, leaning over a wooden cutting board, slicing tomatoes,
+in a sunlit kitchen with copper pots hanging in the background, soft morning light through
+a window, photorealistic style, shallow depth of field.
+```
+
+Five parts, in order. Each part does specific work. Drop any one of them and the result gets blurrier.
+
+## Front-load the most important details
+
+The model gives more weight to words that appear *earlier* in the description. So the order matters.
+
+If the subject is what matters most, put the subject first:
+
+✅ `A red fox standing on a snowy log, looking back over its shoulder, pine forest, dusk light`
+
+❌ `Pine forest at dusk with cold air and snow drifting down, very atmospheric, and there is a red fox standing on a log looking back over its shoulder`
+
+Both descriptions contain the same information. The first will reliably produce a fox. The second will sometimes produce a forest without a fox in it.
+
+## Be specific, not generic
+
+| Generic | Specific |
+| --- | --- |
+| A man | A bearded man in his 40s, wearing a charcoal wool coat |
+| A room | A sunlit Victorian study with floor-to-ceiling bookshelves |
+| Pretty lighting | Warm golden hour light from the left |
+| A dragon | A small green dragon the size of a housecat, perched on a stack of books |
+| Beautiful | (drop the word, say what *makes* it beautiful) |
+
+Adjectives like "beautiful," "amazing," and "stunning" are filler. They tell the model nothing. Replace them with concrete details.
+
+## Don't over-stuff
+
+There's a sweet spot. Too short and the model improvises wildly. Too long and the model averages everything together into mush.
+
+Target: **15 to 40 words** for most images. Image-generating chats run on short, punchy descriptions, not paragraphs.
+
+If you keep wanting to add more, ask yourself: which detail would I *miss* if it weren't there?
+
+## Composition keywords that work
+
+A short list of phrases that reliably steer composition:
+
+| Phrase | Effect |
+| --- | --- |
+| `close-up portrait` | Tight on a face |
+| `medium shot` | Waist-up |
+| `full body shot` | Entire figure |
+| `wide shot` | Subject + environment |
+| `bird's-eye view` | From above |
+| `low angle` | Looking up at the subject |
+| `over-the-shoulder` | First-person view from behind the subject |
+| `centered composition` | Subject in the middle |
+| `rule of thirds` | Subject off-center |
+| `shallow depth of field` | Blurred background |
+| `dramatic backlighting` | Strong light from behind |
+
+## Mood and lighting keywords
+
+| Phrase | Effect |
+| --- | --- |
+| `golden hour` | Warm, low-angle sunlight |
+| `blue hour` | Cool, dim post-sunset |
+| `harsh midday light` | High contrast, short shadows |
+| `overcast` | Soft, even, gray light |
+| `candlelit` | Warm, intimate, low light |
+| `neon-lit` | Saturated, contrasty, urban |
+| `moonlit` | Cool, silver, atmospheric |
+| `foggy` | Soft, low contrast, mysterious |
+
+## Examples
+
+A whole-image description for a fantasy roleplay character:
+
+```
+{{char}}: *A young thief crouches on a rooftop in a rain-soaked city, dark hooded cloak,
+gripping the chimney for balance, distant neon signs flickering below, cool blue lighting,
+cinematic, painterly style.*
+```
+
+For a cooking character:
+
+```
+{{char}}: *Top-down shot of a wooden table with a steaming bowl of ramen, soft-boiled egg
+sliced in half, scattered green onions, chopsticks resting on a folded napkin,
+warm overhead light, hyper-realistic food photography.*
+```
+
+For a slice-of-life character:
+
+```
+{{char}}: *A girl in a yellow raincoat sitting on a park bench, holding a mug of tea,
+autumn leaves on the ground, soft rainy afternoon light, watercolor illustration style.*
+```
+
+Notice each one:
+- Names the subject first
+- Describes the action and environment
+- Specifies lighting
+- Ends with the visual style
+
+That's the formula. Use it.
+
+## What *not* to put in descriptions
+
+- **Conversational text.** The image prompt isn't dialogue. `A picture of me cooking` is much weaker than `A young chef in a white apron, slicing tomatoes, in a sunlit kitchen`.
+- **Negations.** "Not blurry," "not dark," "not low quality", these often *introduce* what they're trying to avoid. Describe what you *want* instead.
+- **Conflicting styles.** Don't say "photorealistic anime watercolor oil painting." Pick one.
+- **Names of real artists** unless you really mean it. "In the style of Greg Rutkowski" has a recognizable look, but it can also dominate the image to the point that the actual subject gets lost.
+
+<Tip>
+  When an image comes out wrong, don't just add more words. Try *removing* the part that's confusing it. Less is often the fix.
+</Tip>

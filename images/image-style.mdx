@@ -1,0 +1,86 @@
+---
+title: "Image Style"
+description: "Lock in a consistent visual identity across every image your character sends."
+icon: "palette"
+---
+
+**Optional.** Up to 100 characters.
+
+Image Style is a short phrase that gets blended into *every* image your character generates. Use it to establish a baseline look, the visual signature of the character, so individual images don't have to repeat the same style details over and over.
+
+## Where it lives
+
+Image Style is a separate field in the character editor, right under the toggle for Image Generation. You don't put it in the Definition.
+
+## What to put there
+
+Short, visual, and stylistic. Don't describe the *subject*, that comes per-message. Describe the *look*.
+
+Good examples:
+
+- `Ghibli-inspired watercolor, soft pastels, hand-drawn linework`
+- `1980s anime cel art, bright saturated colors, retro grain`
+- `Dark fantasy oil painting, dramatic chiaroscuro lighting`
+- `Pixel art, 16-bit era, limited color palette`
+- `Photorealistic cinematic, shallow depth of field, film grain`
+- `Children's storybook illustration, soft gouache, warm earth tones`
+
+## How it combines with each message
+
+If your Image Style is:
+
+```
+Watercolor illustration, soft pastels, hand-drawn lines
+```
+
+And your character writes:
+
+```
+*A cat sitting on a windowsill, looking at falling snow*
+```
+
+The actual prompt the model uses becomes something like:
+
+```
+A cat sitting on a windowsill, looking at falling snow,
+watercolor illustration, soft pastels, hand-drawn lines
+```
+
+Your character can focus on writing scene descriptions. The visual style stays consistent automatically.
+
+## When to leave it empty
+
+If your character's *content* varies wildly in style, a photographer character who can shoot anything from a portrait to a sports moment, leave the field empty and let each message specify its own style.
+
+## How specific should it be?
+
+A trade-off:
+
+- **Very specific** (`Anime, Studio Ghibli, watercolor backgrounds, 1990s grain, soft pastels, bokeh, atmospheric`), strong consistency, but limits what scenes look right
+- **Moderately specific** (`Anime, watercolor, soft pastels`), good consistency with flexibility
+- **Very loose** (`Anime`), barely constrains anything, useful as a baseline
+
+Most successful image-generating characters land in the middle. Three to six well-chosen words is usually enough.
+
+## A pattern that works: pick a reference
+
+If you have a specific look in mind, write down the *category, medium, and era* of the inspiration:
+
+- **Category:** anime, photography, oil painting, watercolor, pixel art, 3D render
+- **Medium:** what would it be drawn or shot on? Pencil sketch, gouache, 35mm film, ink wash?
+- **Era / tradition:** 80s anime, golden-age comics, art-nouveau, modern indie game?
+
+`80s anime, hand-drawn cel, ink wash backgrounds` is far more specific, and more reproducible, than `anime style`.
+
+## Reference: prompt books
+
+Two prompt collections that are good starting points for vocabulary, even though they're written for general image models:
+
+- The OpenArt Prompt Book
+- The DALL·E 2 Prompt Book
+
+Both list dozens of style words with example renderings, which is great for vocabulary-building.
+
+<Tip>
+  Once you settle on a style, **save the exact phrase** so you can reuse it on related characters. A recurring style ties a "universe" of characters together visually.
+</Tip>

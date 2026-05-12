@@ -1,0 +1,89 @@
+---
+title: "Consistency"
+description: "Making your character look the same across many images."
+icon: "repeat"
+---
+
+Image generation has a hard problem: every image is generated independently, without memory of the last one. Your character can look subtly (or wildly) different from message to message, different hair color, different outfit, different age.
+
+You can't eliminate this. But you can reduce it dramatically.
+
+## What stays consistent for free
+
+A few things tend to hold up well across images without much work:
+
+- **Overall style**, if you set an Image Style, every image will at least *feel* like part of the same world
+- **General mood**, palette and lighting tend to stick when you reinforce them
+- **Genre cues**, fantasy, sci-fi, slice-of-life vibes survive across images
+
+## What drifts
+
+The things that change without effort:
+
+- **Specific facial features**, eye color, nose shape, freckles
+- **Outfit details**, color of a shirt, type of jewelry
+- **Background details**, exact same room across images? Very hard
+- **Side characters**, companion characters change wildly without anchoring
+
+## The single most useful technique: a "character description anchor"
+
+Pick a short, repeatable phrase that describes your character visually. Use it *verbatim* in every image description.
+
+Example anchor:
+
+```
+a young woman with shoulder-length curly red hair, green eyes, freckles,
+wearing a dark green hooded cloak
+```
+
+Use that exact phrase in every Direct Image Description:
+
+```
+{{char}}: *Wide shot of {{anchor}} standing on a cliff at sunset, ocean below, golden hour lighting, painterly style*
+```
+
+Where `{{anchor}}` gets replaced (mentally, Sutorichat doesn't support custom variables like that) with the full description. You write it out every time.
+
+It's wordy. Do it anyway. It's the difference between a recognizable character and a stranger every turn.
+
+## Teach the anchor in the Definition
+
+In the Definition, show the character using the anchor in every example response:
+
+```
+{{random_user_1}}: Hi! What do you look like?
+{{char}}: *A young woman with shoulder-length curly red hair, green eyes, and freckles, wearing a dark green hooded cloak, smiling at the camera, soft natural lighting, painterly style*
+Hey! Hood and all, that's me.
+{{random_user_1}}: Where are you?
+{{char}}: *A young woman with shoulder-length curly red hair, green eyes, and freckles, wearing a dark green hooded cloak, sitting at a small wooden table in a cozy tavern, warm candlelight, painterly style*
+Just stopped at the inn, had to get out of the rain.
+```
+
+Two examples in, the character is repeating the anchor on its own. You've taught the pattern.
+
+## Other things that help
+
+- **Pin one strong adjective per feature.** "Sharp green eyes" beats "green eyes", the strong word reinforces itself.
+- **Limit the outfit.** Pick one or two distinctive items (a hooded cloak, a leather jacket, a bow tie). Mention them every time. The rest of the outfit can vary.
+- **Use names of recognizable archetypes.** "Inspired by a 90s anime protagonist" or "in the style of a Studio Ghibli heroine" anchors the look in a familiar pattern the model knows well.
+- **Avoid hard-to-render details.** Specific tattoos, complex jewelry, scars in precise places, these drift the most. If you need them, accept they'll be approximate.
+
+## What about real photos as references?
+
+Sutorichat doesn't currently let you supply an image as a visual reference for new generations, only text descriptions. So consistency is entirely a text-prompt problem. Anchor phrases are the answer.
+
+## For multi-character scenes
+
+If your character interacts with a fixed cast (a sidekick, a pet, a recurring rival), give each one its own anchor and use both in the description:
+
+```
+*A young woman with shoulder-length curly red hair and a dark green hooded cloak,
+sitting across from a tall older man with a long white beard and brown wool robes,
+in a cozy tavern, warm candlelight, painterly style*
+```
+
+Order matters, the first character described gets more attention from the model. Put your *main* character first.
+
+<Tip>
+  If you only do *one* thing to improve image consistency: write a 15–20 word character description and reuse it in every image prompt. Verbatim. Every time.
+</Tip>

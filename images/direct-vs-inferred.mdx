@@ -1,0 +1,98 @@
+---
+title: "Direct vs Inferred Descriptions"
+description: "The two ways your character generates images, and how to pick between them."
+icon: "route"
+---
+
+Every image-generating character produces images one of two ways:
+
+- **Inferred**, the system reads the character's text response and decides what to draw.
+- **Direct**, the character explicitly writes the image description in their response, in italics.
+
+The choice has big consequences. Here's how to decide.
+
+## Inferred Image Descriptions
+
+The simplest setup. You enable image generation, turn nothing else on, and start chatting. Every response the character gives is also fed back into the image generator.
+
+**Pros:**
+
+- Zero work, you don't have to write image prompts in the Definition.
+- Images naturally match whatever the character is talking about.
+
+**Cons:**
+
+- **Unpredictable.** What the character is *talking about* isn't always what you'd want to *see*.
+- **Inconsistent.** Subtle details, the character's appearance, the location, drift from image to image.
+- **Often misses the subject.** If the character says "I love this view," the image might show a generic landscape or a portrait of the character, depending on what the system fixates on.
+
+Use Inferred for casual, exploratory characters where you don't mind some surprise. Lean on a strong [Image Style](/images/image-style) to keep things consistent.
+
+## Direct Image Descriptions
+
+You set up your Definition with examples where the character *writes the image description in italics* as part of their response. The system pulls out the italicized parts and uses them as image prompts. The rest of the message stays as normal dialog.
+
+The convention: **anything in `*italics*` is an image prompt**.
+
+Example response:
+
+```
+{{char}}: *A small brown pug sitting on a green lawn, looking up at the camera with a happy expression*
+Pumba is happy to see you!
+```
+
+What the user sees: text saying *Pumba is happy to see you!* and an image of a brown pug on a lawn.
+
+What the user reads: just the dialog. The italicized description renders alongside the image (or stays hidden, see [Hidden Descriptions](/images/hidden-descriptions)).
+
+## Setting it up
+
+You teach the pattern through example dialogs in the Definition:
+
+```
+{{random_user_1}}: Hi Pumba.
+{{char}}: *A brown pug looks up at you with a wagging tail in a sunny backyard*
+Pumba is happy to see you!
+{{random_user_1}}: Pugs are cool.
+{{char}}: *The pug rolls onto its back in the grass, paws in the air*
+Pumba thinks you're cool too!
+```
+
+Once you've shown 2–3 examples, the character locks into the pattern. Every response after that will include an italicized image description.
+
+You can also use the **Insert example image description** button in the character editor, which inserts a template you can fill in.
+
+## Pros and cons
+
+**Pros:**
+
+- **Predictable.** You control exactly what gets drawn.
+- **Consistent.** You can reuse phrasing (e.g., always describing the same character the same way).
+- **Composable.** The dialog and the image work together as a unified scene.
+
+**Cons:**
+
+- **Setup time.** You have to write example dialogs in the Definition.
+- **Italics overhead.** The character has to remember to write image descriptions every time.
+
+For any serious image-generating character, Direct is the way.
+
+## What if the character forgets the italics?
+
+Sometimes a response will come out without an italicized image description. The system falls back to Inferred, it generates an image based on whatever the character said.
+
+To minimize this:
+
+- Provide more example dialogs (3–5 is usually enough)
+- Put image-generating examples *first* in the Definition
+- Keep example italicized descriptions short and tight
+
+## One image per message
+
+The system handles multiple `*italicized*` segments per message by trying to combine them, but the result is unpredictable. **One image description per message is the safest pattern.**
+
+If you want a scene that needs more than one image, send two messages.
+
+<Tip>
+  Write the italicized description *first* in the message, then the dialogue. This trains the character to lead with the visual, which makes the rest of the message feel more grounded.
+</Tip>

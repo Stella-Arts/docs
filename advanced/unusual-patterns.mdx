@@ -1,0 +1,100 @@
+---
+title: "Unusual Patterns"
+description: "Games, strict formats, and recurring response shapes."
+icon: "shuffle"
+---
+
+The more your character's responses *differ from normal conversation*, the more examples you need in the Definition. Plain chat is the system's default, anything else has to be demonstrated.
+
+## When you need lots of examples
+
+You need extensive examples when:
+
+- Responses follow a strict format (a quiz, a game, a template)
+- Responses use unusual punctuation, capitalization, or rhythm
+- The character speaks in rhyme, haiku, or a constructed dialect
+- Replies always have a specific structure (e.g., always ends with a question)
+
+A loose pattern needs 2–3 examples. A strict pattern needs 5+.
+
+## Pattern: Fortunately / Unfortunately
+
+A back-and-forth game where the character flips your good news into bad news:
+
+```
+{{random_user_1}}: Fortunately, I just won the lottery.
+{{char}}: Unfortunately, after taxes you only get 50 cents.
+{{random_user_1}}: Fortunately, I only need 50 cents for a burger.
+{{char}}: Unfortunately, you forgot the fries.
+{{random_user_1}}: Fortunately, I found old chips at home.
+{{char}}: Unfortunately, the chips are stale.
+{{random_user_1}}: Fortunately, the bag's a collector's item now.
+```
+
+By giving four examples in a row, the character locks onto the format.
+
+## Pattern: Alphabetical improv
+
+Each line must start with the next letter in the alphabet:
+
+```
+moderator: Each line begins with the next letter in the alphabet. The first person might say "D Dogs are running wild." The next person continues with "E Empty food cans everywhere."
+{{char}}: Got it.
+{{random_user_1}}: Q Quickly, bring me the crystals!
+{{char}}: R Right away, here they are.
+{{random_user_1}}: S Some are cracked, is that okay?
+{{char}}: T Trust me, they'll never notice.
+{{random_user_1}}: U Unless that appraiser is working.
+{{char}}: V Vernon? He's the worst.
+```
+
+Putting the letter at the start, separated by a space, helps the system stay on the pattern.
+
+## Pattern: Choose your own adventure
+
+A book-like format with page numbers and choices:
+
+```
+{{char}}: ##### The Old Mine
+**Page 1**
+You notice an abandoned mine in the cliffside. A path leads to the entrance.
+
+If you go in, turn to **page 2**
+If you examine the path, turn to **page 6**
+{{user}}: 2
+{{char}}: **Page 2**
+You enter the mine. The path slopes down to a platform overlooking a cavern. There's rusty equipment, a rickety cage on a pulley, and a ladder descending into darkness.
+
+If you search the equipment, turn to **page 11**
+If you take the cage down, turn to **page 19**
+```
+
+Note the heavy use of Markdown, headings, bold pages, a clean layout, to lock in the visual format.
+
+## Pattern: Always replies with a question
+
+Useful for therapist-style characters, Socratic teachers, or interviewers.
+
+```
+{{random_user_1}}: I'm feeling pretty stressed lately.
+{{char}}: What does stress look like for you today, racing thoughts, physical tension, both?
+{{random_user_1}}: My chest is tight.
+{{char}}: When you notice the tightness, what's the first thought that shows up?
+{{random_user_1}}: That I'm behind on everything.
+{{char}}: And if you were caught up, what would you be doing right now instead?
+```
+
+Three or four examples is usually enough for the system to keep asking questions instead of giving advice.
+
+## Tips for stubborn patterns
+
+If the pattern keeps slipping:
+
+1. **Add more examples.** This is almost always the fix.
+2. **Move examples to the top of the Definition.** Earlier examples carry more weight.
+3. **Add a "moderator" voice** that explains the rules at the start, then disappears.
+4. **Make the pattern visually distinct**, capitalization, headers, line breaks. Visual consistency reinforces textual consistency.
+
+<Tip>
+  When testing, push the character with an off-pattern message and see what happens. If it drops the pattern, add an example of *recovering*, where a user goes off-script and the character gently snaps back to the format.
+</Tip>

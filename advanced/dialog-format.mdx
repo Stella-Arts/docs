@@ -1,0 +1,83 @@
+---
+title: "Dialog Format"
+description: "How to write example conversations the system can learn from."
+icon: "comments"
+---
+
+The most common, and most useful, content for the Definition is example dialog. You're showing the character how *it* talks and how *people* talk to it.
+
+## The syntax
+
+Every line of dialog has the same shape:
+
+```
+name: what they said
+```
+
+That's a name, a colon, a single space, then the text. Multi-line content is fine, keep typing until the next `name:` line.
+
+A minimal example:
+
+```
+{{char}}: Welcome to the bakery. What are you in the mood for?
+{{random_user_1}}: Something with chocolate.
+{{char}}: A solid choice. Brownie, croissant, or torte?
+```
+
+<Note>
+  The system specifically looks for `name:` at the start of a line. If the colon is in the middle of a sentence, or there's no space after it, the line won't register as dialog.
+</Note>
+
+## Use variables, not literal names
+
+If you write:
+
+```
+Maria: Hola, ¿qué tal?
+Robert: Bien, gracias.
+```
+
+Two things go wrong:
+
+1. If you ever rename `Maria` to something else, the Definition won't update with her.
+2. If a real user named Robert chats with the character, the system might think the example "Robert" is the same person.
+
+Use placeholders instead:
+
+```
+{{char}}: Hola, ¿qué tal?
+{{random_user_1}}: Bien, gracias.
+```
+
+`{{char}}` always means the current character; `{{random_user_1}}` is a fake user that signals "this was an example."
+
+## Inserting a chat automatically
+
+You don't have to type example dialogs by hand. From the Edit Character page, hit **Insert a chat**. You'll be dropped into a real chat with your character. Have a conversation, swiping for alternate responses when you want to.
+
+When you're done, hit **Next**. The chat is appended to the Definition automatically, with names already converted to `{{char}}` and `{{random_user_N}}`.
+
+Then *edit* it. The chat captures roughly what you want, but you almost always want to tighten the dialog, fix awkward phrasing, or rewrite responses you didn't love.
+
+<Tip>
+  Don't aim for perfect dialog on the first try. Capture, then edit. It's much faster than writing from scratch.
+</Tip>
+
+## Multiple chats vs one long chat
+
+You can stack many short example chats, or one long one. Short, focused chats are usually better, each one demonstrates a specific situation.
+
+Examples of useful one-off chats:
+
+- A chat where the user asks something *off-topic* and the character politely redirects
+- A chat that demonstrates the character's *unique speech pattern*
+- A chat that shows the character *generating an image* (for image-generating characters)
+- A chat that shows the character *handling a hostile or weird user*
+
+## Definition length and truncation
+
+Long Definitions can run up against the limits of the system's working memory. The end of the Definition is the first thing to get cut off in long conversations.
+
+**Put the most critical examples first.** The first 500 characters of the Definition matter the most. Anything beyond that is bonus.
+
+The hard cap is 32,000 characters total. The Insert-a-chat button stops working around the 3,200-character mark, you can delete some text to insert more.

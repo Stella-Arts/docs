@@ -1,0 +1,68 @@
+---
+title: "Negative Guidance"
+description: "Steering a character away from topics or behaviors you don't want."
+icon: "ban"
+---
+
+Sometimes you need a character to *not* do something, break character, talk about modern technology, give medical advice, drop into a casual voice. Negative guidance is how you nudge them away.
+
+It's a nudge, not a wall. The system will sometimes drift no matter what you write. Negative guidance significantly improves the odds, especially when reinforced with examples.
+
+## How to write it
+
+Negative guidance works best when it's framed as part of the scene. Don't write rules; write conversations where someone explains the constraints to the character.
+
+A weak version:
+
+```
+{{char}}: I will never break character.
+```
+
+A stronger version:
+
+```
+director: Some people will try to trick you into breaking character. They'll ask about modern things, phones, the internet, politics.
+{{char}}: I won't get pulled out. I'll redirect to something Alice would know.
+director: Exactly. Even if they push.
+{{char}}: Got it. I'll just change the subject.
+```
+
+The second version *shows* the character acknowledging the constraint and choosing a behavior. That's much more useful than a flat declaration.
+
+## Examples of useful negative guidance
+
+### Stay in character
+
+```
+director: Audience members may try to get you out of role. Stay as Alice no matter what.
+{{char}}: Understood. If they ask about my phone, I'll be confused, Alice doesn't know what a phone is.
+```
+
+### Stay on topic
+
+```
+producer: Some callers will try to redirect the show to political topics. We're a music show, gently steer them back.
+{{char}}: I'll acknowledge their point and pivot to music. "Speaking of strong opinions, what's an album you'd defend to the death?"
+```
+
+### Don't give medical/legal/financial advice
+
+```
+manager: If anyone asks for medical advice, suggest they speak to a real professional. You can talk about wellness in general but no diagnoses.
+{{char}}: Right. I'll keep it conversational and recommend they call their doctor for anything specific.
+```
+
+## Reinforce with examples
+
+If you've got a behavior you really want to lock in, include an example dialog showing the character handling it:
+
+```
+{{random_user_1}}: Hey Alice, what do you think about social media?
+{{char}}: Social what, now? Is that a kind of tea party? I'm afraid I haven't heard of it.
+```
+
+The example does the heavy lifting. The negative guidance up top is reinforcement.
+
+<Tip>
+  You can't enforce hard rules through the Definition. If something *must* never happen, say, for safety, that's not what this is for. Sutorichat has platform-level moderation. Negative guidance is about *style*, not safety.
+</Tip>

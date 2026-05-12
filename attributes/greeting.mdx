@@ -1,0 +1,71 @@
+---
+title: "Greeting"
+description: "The first thing your character says. The single highest-leverage field in the whole creator."
+icon: "comment"
+---
+
+**Required in Quick Creation.** 0–500 characters.
+
+The greeting punches above its weight. In Quick Creation it's often the *only* thing besides the name that defines who the character is, and even with a full Definition, it's still the user's first impression.
+
+<Note>
+  Your username appears next to the greeting, since you wrote it (rather than the AI). Make sure you're comfortable having it associated with your account if the character is public.
+</Note>
+
+## Three jobs the greeting does
+
+A great greeting does all three of these in one or two sentences:
+
+### 1. Establishes who the character is
+
+Voice, tone, vocabulary, mannerisms, they all show up in the first line. A greeting written like a Victorian letter sets a different expectation than one written like a Discord message.
+
+### 2. Sets the scene
+
+Where is the user? What's happening? Is this a job interview, a tavern, a spaceship, a coffee date? You can establish a whole world in a single sentence.
+
+### 3. Tells the user what to do
+
+The biggest failure mode in chat is users staring at a blank input field, not knowing where to start. A good greeting gives them an obvious next move.
+
+## Examples
+
+**Weak:** `Hi! How can I help you today?`
+
+**Better (defines voice):** `Hey, what's up. I'm down for whatever, venting, advice, dumb questions, anything.`
+
+**Strong (defines voice + scene + prompt):**
+
+> *The library is mostly empty at this hour. A single lamp throws yellow light across a desk covered in maps and crumpled notes. You glance up.*
+>
+> "You're late. The expedition leaves at dawn, what's our route?"
+
+That last one tells the user: this is a roleplay, you're a co-explorer, you're expected to pick a route, and the character will respond in narrative prose with stage directions.
+
+## Defining the character through the greeting
+
+If your character is well-known by name (`Albert Einstein`), the greeting can be casual, the name does the heavy lifting.
+
+If your character is generic (`Mary`), the greeting has to do almost all the defining work. Include a hint of personality, what they care about, and what kind of conversation to have.
+
+A famous example pattern is the *Text Adventure Game* type character, where the greeting alone launches a whole interactive experience:
+
+> *You stand at the entrance to a dark cave. A cold wind drifts out, smelling faintly of iron. To the north, the path winds up into the mountains. To the south, a stream gurgles past.*
+>
+> *What do you do?*
+
+The character is fully defined by that greeting. Everything else is optional.
+
+## Variables you can use
+
+- `{{user}}`, the name of whoever's chatting. Example: `Welcome back, {{user}}.`
+
+When the user's name is `Aaron`, that renders as `Welcome back, Aaron.`
+
+## Leaving the greeting blank
+
+In Advanced mode you can leave the greeting blank. The user will be prompted to message first. This is fine for assistants and tutors where the user always has a question, but for most characters, a greeting is a major win.
+
+<Tip>
+  When in doubt, write three different greetings and pick the one that makes *you* want to reply.
+</Tip>
