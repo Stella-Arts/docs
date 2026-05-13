@@ -1,0 +1,300 @@
+- generic [ref=e4]:
+  - generic [ref=e8]:
+    - generic [ref=e11]:
+      - link "Docs home page light logo" [ref=e13] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e14]: Docs home page
+        - img "light logo" [ref=e15]
+      - button "Open search" [ref=e17] [cursor=pointer]:
+        - generic [ref=e18]:
+          - img [ref=e19]
+          - generic [ref=e22]: Search...
+        - generic [ref=e23]: ⌘K
+      - generic [ref=e24]:
+        - navigation [ref=e25]:
+          - list [ref=e26]:
+            - listitem [ref=e27]:
+              - link "Support" [ref=e28] [cursor=pointer]:
+                - /url: mailto:yash@megaphoneteam.com
+            - listitem [ref=e29]:
+              - link "Open Sutorichat" [ref=e30] [cursor=pointer]:
+                - /url: https://sutorichat.com
+                - generic [ref=e32]:
+                  - generic [ref=e33]: Open Sutorichat
+                  - img [ref=e34]
+        - button "Toggle dark mode" [ref=e37] [cursor=pointer]:
+          - img [ref=e38]
+    - link "Character Guide" [ref=e47] [cursor=pointer]:
+      - /url: /
+      - text: Character Guide
+  - generic [ref=e49]:
+    - generic [ref=e53]:
+      - generic [ref=e54]:
+        - heading "Getting Started" [level=5] [ref=e56]
+        - list [ref=e57]:
+          - listitem [ref=e58]:
+            - link "Welcome to the Character Guide" [ref=e59] [cursor=pointer]:
+              - /url: /
+              - img [ref=e61]
+              - generic [ref=e64]: Welcome to the Character Guide
+          - listitem [ref=e65]:
+            - link "Quick Creation" [ref=e66] [cursor=pointer]:
+              - /url: /quickstart
+              - img [ref=e68]
+              - generic [ref=e71]: Quick Creation
+          - listitem [ref=e72]:
+            - link "Screenshot Reference" [ref=e73] [cursor=pointer]:
+              - /url: /screenshots
+              - img [ref=e75]
+              - generic [ref=e78]: Screenshot Reference
+          - listitem [ref=e79]:
+            - link "Character Profile" [ref=e80] [cursor=pointer]:
+              - /url: /character-profile
+              - img [ref=e82]
+              - generic [ref=e85]: Character Profile
+      - generic [ref=e86]:
+        - heading "Creator Walkthrough" [level=5] [ref=e88]
+        - list [ref=e89]:
+          - listitem [ref=e90]:
+            - link "Cover" [ref=e91] [cursor=pointer]:
+              - /url: /cover
+              - img [ref=e93]
+              - generic [ref=e96]: Cover
+          - listitem [ref=e97]:
+            - link "Character" [ref=e98] [cursor=pointer]:
+              - /url: /character
+              - img [ref=e100]
+              - generic [ref=e103]: Character
+      - generic [ref=e104]:
+        - heading "Character Attributes" [level=5] [ref=e106]
+        - list [ref=e107]:
+          - listitem [ref=e108]:
+            - link "Character Attributes" [ref=e109] [cursor=pointer]:
+              - /url: /attributes/overview
+              - img [ref=e111]
+              - generic [ref=e114]: Character Attributes
+          - listitem [ref=e115]:
+            - link "Name" [ref=e116] [cursor=pointer]:
+              - /url: /attributes/name
+              - img [ref=e118]
+              - generic [ref=e121]: Name
+          - listitem [ref=e122]:
+            - link "Avatar" [ref=e123] [cursor=pointer]:
+              - /url: /attributes/avatar
+              - img [ref=e125]
+              - generic [ref=e128]: Avatar
+          - listitem [ref=e129]:
+            - link "Greeting" [ref=e130] [cursor=pointer]:
+              - /url: /attributes/greeting
+              - img [ref=e132]
+              - generic [ref=e135]: Greeting
+          - listitem [ref=e136]:
+            - link "Short Description" [ref=e137] [cursor=pointer]:
+              - /url: /attributes/short-description
+              - img [ref=e139]
+              - generic [ref=e142]: Short Description
+          - listitem [ref=e143]:
+            - link "Long Description" [ref=e144] [cursor=pointer]:
+              - /url: /attributes/long-description
+              - img [ref=e146]
+              - generic [ref=e149]: Long Description
+          - listitem [ref=e150]:
+            - link "Categories" [ref=e151] [cursor=pointer]:
+              - /url: /attributes/categories
+              - img [ref=e153]
+              - generic [ref=e156]: Categories
+          - listitem [ref=e157]:
+            - link "Visibility" [ref=e158] [cursor=pointer]:
+              - /url: /attributes/visibility
+              - img [ref=e160]
+              - generic [ref=e163]: Visibility
+          - listitem [ref=e164]:
+            - link "Definition" [ref=e165] [cursor=pointer]:
+              - /url: /attributes/definition
+              - img [ref=e167]
+              - generic [ref=e170]: Definition
+      - generic [ref=e171]:
+        - heading "Advanced Creation" [level=5] [ref=e173]
+        - list [ref=e174]:
+          - listitem [ref=e175]:
+            - link "Advanced Creation" [ref=e176] [cursor=pointer]:
+              - /url: /advanced/overview
+              - img [ref=e178]
+              - generic [ref=e181]: Advanced Creation
+          - listitem [ref=e182]:
+            - link "Dialog Format" [ref=e183] [cursor=pointer]:
+              - /url: /advanced/dialog-format
+              - img [ref=e185]
+              - generic [ref=e188]: Dialog Format
+          - listitem [ref=e189]:
+            - link "Setting a Scene" [ref=e190] [cursor=pointer]:
+              - /url: /advanced/setting-a-scene
+              - img [ref=e192]
+              - generic [ref=e195]: Setting a Scene
+          - listitem [ref=e196]:
+            - link "Visual novels" [ref=e197] [cursor=pointer]:
+              - /url: /advanced/visual-novels
+              - img [ref=e199]
+              - generic [ref=e202]: Visual novels
+          - listitem [ref=e203]:
+            - link "Webtoons" [ref=e204] [cursor=pointer]:
+              - /url: /advanced/webtoons
+              - img [ref=e206]
+              - generic [ref=e209]: Webtoons
+          - listitem [ref=e210]:
+            - link "Negative Guidance" [ref=e211] [cursor=pointer]:
+              - /url: /advanced/negative-guidance
+              - img [ref=e213]
+              - generic [ref=e216]: Negative Guidance
+          - listitem [ref=e217]:
+            - link "Unusual Patterns" [ref=e218] [cursor=pointer]:
+              - /url: /advanced/unusual-patterns
+              - img [ref=e220]
+              - generic [ref=e223]: Unusual Patterns
+          - listitem [ref=e224]:
+            - link "Formatting" [ref=e225] [cursor=pointer]:
+              - /url: /advanced/formatting
+              - img [ref=e227]
+              - generic [ref=e230]: Formatting
+      - generic [ref=e231]:
+        - heading "Images" [level=5] [ref=e233]
+        - list [ref=e234]:
+          - listitem [ref=e235]:
+            - link "Image Generation" [ref=e236] [cursor=pointer]:
+              - /url: /images/introduction
+              - img [ref=e238]
+              - generic [ref=e241]: Image Generation
+          - listitem [ref=e242]:
+            - link "Writing Image Descriptions" [ref=e243] [cursor=pointer]:
+              - /url: /images/writing-descriptions
+              - img [ref=e245]
+              - generic [ref=e248]: Writing Image Descriptions
+          - listitem [ref=e249]:
+            - link "Image Style" [ref=e250] [cursor=pointer]:
+              - /url: /images/image-style
+              - img [ref=e252]
+              - generic [ref=e255]: Image Style
+          - listitem [ref=e256]:
+            - link "Direct vs Inferred Descriptions" [ref=e257] [cursor=pointer]:
+              - /url: /images/direct-vs-inferred
+              - img [ref=e259]
+              - generic [ref=e262]: Direct vs Inferred Descriptions
+          - listitem [ref=e263]:
+            - link "Hidden Descriptions" [ref=e264] [cursor=pointer]:
+              - /url: /images/hidden-descriptions
+              - img [ref=e266]
+              - generic [ref=e269]: Hidden Descriptions
+          - listitem [ref=e270]:
+            - link "Composition" [ref=e271] [cursor=pointer]:
+              - /url: /images/composition
+              - img [ref=e273]
+              - generic [ref=e276]: Composition
+          - listitem [ref=e277]:
+            - link "Style Reference" [ref=e278] [cursor=pointer]:
+              - /url: /images/style-reference
+              - img [ref=e280]
+              - generic [ref=e283]: Style Reference
+          - listitem [ref=e284]:
+            - link "Consistency" [ref=e285] [cursor=pointer]:
+              - /url: /images/consistency
+              - img [ref=e287]
+              - generic [ref=e290]: Consistency
+          - listitem [ref=e291]:
+            - link "Common Pitfalls" [ref=e292] [cursor=pointer]:
+              - /url: /images/pitfalls
+              - img [ref=e294]
+              - generic [ref=e297]: Common Pitfalls
+      - generic [ref=e298]:
+        - heading "After Creation" [level=5] [ref=e300]
+        - list [ref=e301]:
+          - listitem [ref=e302]:
+            - link "Training Your Character" [ref=e303] [cursor=pointer]:
+              - /url: /training
+              - img [ref=e305]
+              - generic [ref=e308]: Training Your Character
+          - listitem [ref=e309]:
+            - link "Challenges and Limitations" [ref=e310] [cursor=pointer]:
+              - /url: /challenges
+              - img [ref=e312]
+              - generic [ref=e315]: Challenges and Limitations
+    - generic [ref=e318]:
+      - banner [ref=e319]:
+        - generic [ref=e320]:
+          - generic [ref=e321]: Getting Started
+          - generic [ref=e322]:
+            - heading "Screenshot Reference" [level=1] [ref=e323]
+            - generic [ref=e324]:
+              - button "Copy page" [ref=e325] [cursor=pointer]:
+                - generic [ref=e326]:
+                  - img [ref=e327]
+                  - generic [ref=e330]: Copy page
+              - button "More actions" [ref=e331] [cursor=pointer]:
+                - img [ref=e332]
+        - paragraph [ref=e335]: All captured Sutorichat creator screenshots used across this guide.
+      - generic [ref=e336]:
+        - generic [ref=e337]: This page gathers the creator screenshots in one place. The individual guide pages also use these images where they explain each workflow.
+        - heading "Navigate to header Product home" [level=2] [ref=e338]:
+          - link "Navigate to header" [ref=e339] [cursor=pointer]:
+            - /url: "#product-home"
+            - img [ref=e341]
+          - generic [ref=e343] [cursor=pointer]: Product home
+        - img "The Sutorichat home feed showing rows of character cards." [ref=e350]
+        - img "The expanded Create menu showing Character, Visual Novel, and Webtoon options." [ref=e358]
+        - heading "Navigate to header Character creator" [level=2] [ref=e360]:
+          - link "Navigate to header" [ref=e361] [cursor=pointer]:
+            - /url: "#character-creator"
+            - img [ref=e363]
+          - generic [ref=e365] [cursor=pointer]: Character creator
+        - img "The Sutorichat character cover setup screen." [ref=e372]
+        - img "The Sutorichat character fields screen." [ref=e380]
+        - img "The Sutorichat avatar menu." [ref=e388]
+        - img "The Sutorichat avatar generation modal." [ref=e396]
+        - img "The Sutorichat initial setup greeting area." [ref=e404]
+        - heading "Navigate to header Visual novels" [level=2] [ref=e406]:
+          - link "Navigate to header" [ref=e407] [cursor=pointer]:
+            - /url: "#visual-novels"
+            - img [ref=e409]
+          - generic [ref=e411] [cursor=pointer]: Visual novels
+        - img "The Sutorichat visual novel cover setup screen." [ref=e418]
+        - img "The Sutorichat visual novel character fields screen." [ref=e426]
+        - img "The Sutorichat visual novel initial setup screen." [ref=e434]
+        - img "The Sutorichat visual novel stats and Definition fields." [ref=e442]
+        - heading "Navigate to header Webtoons" [level=2] [ref=e444]:
+          - link "Navigate to header" [ref=e445] [cursor=pointer]:
+            - /url: "#webtoons"
+            - img [ref=e447]
+          - generic [ref=e449] [cursor=pointer]: Webtoons
+        - img "The Sutorichat webtoon cover setup screen." [ref=e456]
+        - img "The Sutorichat webtoon character fields screen." [ref=e464]
+        - img "The Sutorichat webtoon opening panel setup screen." [ref=e472]
+        - img "A Sutorichat webtoon chat with a generated visual panel." [ref=e480]
+        - img "A full Sutorichat webtoon chat view after creation." [ref=e488]
+        - heading "Navigate to header Attribute fields" [level=2] [ref=e490]:
+          - link "Navigate to header" [ref=e491] [cursor=pointer]:
+            - /url: "#attribute-fields"
+            - img [ref=e493]
+          - generic [ref=e495] [cursor=pointer]: Attribute fields
+        - img "Sutorichat attribute fields for name, descriptions, and Definition." [ref=e502]
+        - img "Sutorichat private visibility setting." [ref=e510]
+        - heading "Navigate to header Earlier examples" [level=2] [ref=e512]:
+          - link "Navigate to header" [ref=e513] [cursor=pointer]:
+            - /url: "#earlier-examples"
+            - img [ref=e515]
+          - generic [ref=e517] [cursor=pointer]: Earlier examples
+        - img "Earlier Cover tab example screenshot." [ref=e524]
+        - img "Earlier Character tab example screenshot." [ref=e532]
+      - generic [ref=e534]:
+        - link "Quick Creation" [ref=e535] [cursor=pointer]:
+          - /url: /quickstart
+          - img [ref=e536]
+          - generic [ref=e538]: Quick Creation
+        - link "Character Profile" [ref=e539] [cursor=pointer]:
+          - /url: /character-profile
+          - generic [ref=e540]: Character Profile
+          - img [ref=e541]
+      - contentinfo [ref=e543]:
+        - link "Powered by This documentation is built and hosted on Mintlify, a developer documentation platform" [ref=e546] [cursor=pointer]:
+          - /url: https://www.mintlify.com?utm_campaign=poweredBy&utm_medium=referral&utm_source=undefined
+          - generic [ref=e547]: Powered by
+          - img [ref=e548]
+          - generic [ref=e557]: This documentation is built and hosted on Mintlify, a developer documentation platform

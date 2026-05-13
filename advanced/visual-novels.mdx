@@ -1,0 +1,171 @@
+---
+title: "Visual novels"
+description: "Build a character that behaves like an interactive visual novel."
+icon: "book-open"
+---
+
+You do not need a separate story builder to make a visual novel on Sutorichat. Build a character whose job is to host a scene, remember the user's role, and keep the story moving.
+
+The key shift: a normal character is someone to talk to. A visual-novel character is a small story engine.
+
+## Start with the public promise
+
+Use the **Cover** tab to make the story readable before anyone opens it.
+
+<Frame caption="The Cover tab sets the public promise: image, title, tagline, and visibility.">
+  <img src="/assets/screenshots/visual-novel-cover-title-tagline-visibility.png" alt="The Sutorichat visual novel cover setup showing cover image, title, tagline, and visibility controls." />
+</Frame>
+
+For visual novels, the cover should sell the first playable situation:
+
+| Weak | Strong |
+| --- | --- |
+| `Magic Academy Story` | `Your rival knows why the academy clock stopped` |
+| `Romance Game` | `Your seatmate confesses during the last train home` |
+| `Fantasy Adventure` | `The dragon princess hires you as her fake knight` |
+
+Readers should understand their role, the genre, and the first tension without reading a lore page.
+
+## Anchor the cast
+
+Use the **Character** tab to define the person, narrator, or game master who will carry the story.
+
+<Frame caption="The Character tab anchors the speaker: portrait, name, introduction, settings, and style instructions.">
+  <img src="/assets/screenshots/visual-novel-character-fields.png" alt="The Sutorichat visual novel character setup showing character image, name, introduction, and settings fields." />
+</Frame>
+
+Pick one host pattern:
+
+| Pattern | Use it when | Example |
+| --- | --- | --- |
+| **Main character** | The user is talking to one central character | A classmate, detective, rival, roommate |
+| **Narrator** | The story has multiple characters and locations | A visual-novel director describing scenes |
+| **Game master** | The user makes choices and the world reacts | A fantasy route host or mystery keeper |
+| **Ensemble lead** | A group exists, but one character guides the chat | The club president, party leader, producer |
+
+Do not overload the name with the whole premise. Put the identity in **Character name** and the playable situation in the cover, greeting, and settings.
+
+## Write the opening scene
+
+The greeting is the first screen of the visual novel. It should do four things:
+
+1. Place the user in a specific moment.
+2. Show the host character's voice.
+3. Define what the user can affect.
+4. End with an obvious next move.
+
+Example:
+
+```md
+*Rain taps against the classroom windows. Ava Grace stands beside the locked music room door, one hand hiding something behind her back.*
+
+"You saw the blue light too, didn't you? Tell me the truth, {{user}}. Did you follow me here, or did the door call you?"
+```
+
+This works because the user knows where they are, who is speaking, and what kind of reply fits the scene.
+
+<Frame caption="The initial setup step is where the first visual-novel scene is written.">
+  <img src="/assets/screenshots/visual-novel-initial-setup-first-scene.png" alt="The Sutorichat visual novel initial setup screen showing fields for the first scene." />
+</Frame>
+
+## Put the story spine in settings
+
+In **Character settings and characteristics**, give the model the rules it needs to continue the story.
+
+<Frame caption="Stats and Definition fields give a visual novel its route logic and memory.">
+  <img src="/assets/screenshots/visual-novel-stats-definition-fields.png" alt="The Sutorichat visual novel setup showing stats and definition fields." />
+</Frame>
+
+```md
+Experience type: Interactive visual novel.
+User role: {{user}} is Ava's classmate and the only other person who noticed the locked music room glowing.
+
+Core premise:
+Ava and {{user}} investigate strange events at Hanamori Academy. Each scene should reveal one clue, deepen Ava's relationship with {{user}}, or force a choice.
+
+Ava:
+Curious, guarded, funny when nervous. She hides fear with sarcasm. She wants help but hates admitting it.
+
+Story loop:
+1. Continue from the user's last action.
+2. Describe the current scene in 1-2 sensory sentences.
+3. Let Ava react with a clear motive.
+4. Reveal one clue, complication, or emotional beat.
+5. End with a question, choice, or immediate pressure.
+
+Soft state to track:
+- Trust: rises when {{user}} is honest or protective, falls when they dismiss Ava.
+- Suspicion: rises when clues point toward the student council.
+- Courage: rises when Ava chooses action over avoidance.
+
+Avoid:
+- Do not summarize the whole mystery early.
+- Do not decide {{user}}'s feelings or actions.
+- Do not use a fixed status block at the top of every reply.
+```
+
+Soft state gives the story continuity without turning every response into a spreadsheet.
+
+## Use choices carefully
+
+Choices help visual novels, but rigid menus can make the chat feel trapped. Use them when the user needs a clear fork:
+
+```md
+Do you:
+1. Ask Ava what she is hiding.
+2. Try the music room door.
+3. Leave before the hallway cameras turn back on.
+```
+
+Use open questions when the user should improvise:
+
+```md
+Ava glances toward the stairwell. "We have maybe ten seconds before someone comes up. What do you do?"
+```
+
+Alternate between both. Menus create structure. Open questions create freedom.
+
+## Keep images consistent
+
+Visual novels benefit from images because each reply can feel like a new panel. Use [Direct descriptions](/images/direct-vs-inferred) when you want control.
+
+Put the image prompt first, then the story beat:
+
+```md
+{{char}}: *Anime visual novel still of Ava Grace, a college-age woman with long brown hair tied with a ribbon, standing in a rain-dark school hallway beside a locked music room door, cool blue light leaking from under the door, cinematic composition*
+
+Ava presses a finger to her lips. "If the door starts singing, run first and ask questions later."
+```
+
+Repeat the same visual anchor for recurring characters. If Ava has long brown hair and a ribbon in the portrait, reuse that phrase every time she appears.
+
+## Avoid the status-block trap
+
+Do not start every reply with a fixed header like this:
+
+```md
+[Day 3 | Trust 4 | Suspicion 2 | Location: Music room]
+```
+
+Repeated headers teach the model to repeat itself. They also push the scene down the page.
+
+If the state matters, write it naturally:
+
+```md
+Ava trusts you enough to hand over the notebook, but her eyes keep flicking to the student council pin on your bag.
+```
+
+If you need a quick recap, put it after the scene or only use it when the user asks.
+
+## Test the first five turns
+
+Before publishing, run a fresh chat and check:
+
+- The first message gives the user something easy to do.
+- The character does not reveal the whole plot immediately.
+- Choices affect later dialogue.
+- The story remembers the user's role.
+- Images match the cover and character portrait.
+- The character can recover if the user gives a short reply like `ok` or `what now?`
+
+When the first five turns work, the rest of the story has a much better chance of holding together.

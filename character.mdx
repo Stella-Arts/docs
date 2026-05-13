@@ -15,8 +15,23 @@ Five fields:
 - **Style instructions** *(optional)*, hidden rules that keep them consistent in long chats
 
 <Frame caption="The filled-out Character tab for Ava Grace.">
-  <img src="/assets/screenshots/character-tab-example.png" alt="The Character tab in the Sutorichat character creator, showing an image of the character and the character name 'Ava Grace'." />
+  <img src="/assets/screenshots/character-avatar-name-description-definition.png" alt="The Sutorichat character setup screen showing avatar, name, short description, long description, and definition fields." />
 </Frame>
+
+The screenshot shows the top of the Character tab: portrait first, then name. Everything below that should support the same identity. Do not make the user decode one character from the image, another from the name, and a third from the prompt.
+
+## Build in layers
+
+Think of the Character tab as four layers:
+
+| Layer | Field | Job |
+| --- | --- | --- |
+| Public face | **Image of the character** and **Character introduction** | Help readers recognize the character and decide if they want to chat |
+| Chat identity | **Character name** | Tell the chat who is speaking |
+| Behavior engine | **Character settings and characteristics** | Define voice, role, relationship, and default reactions |
+| Long-chat guardrails | **Style instructions** | Keep the character's replies shaped the same way after the conversation drifts |
+
+The public fields sell the idea. The settings fields make the idea work.
 
 ## Image of the character
 
@@ -30,6 +45,14 @@ A few things to think about:
 - **Centered face or upper body.** Most viewers will see this small, keep the subject readable.
 - **Consistent look with Situation images.** If your character has shoulder-length brown hair in the portrait, every Situation image of them should too. Inconsistency reads as a different character.
 - **Mood-neutral or signature mood.** If the character is grumpy in *every* situation, use a grumpy portrait. If they're versatile, pick a neutral expression so it doesn't fight scene-specific Situation images.
+
+<Frame caption="Use the avatar menu to generate a new image or upload one.">
+  <img src="/assets/screenshots/character-avatar-generate-menu.png" alt="The Sutorichat avatar menu showing options to generate an avatar or upload an image." />
+</Frame>
+
+<Frame caption="The avatar generator turns a visual prompt into a character image.">
+  <img src="/assets/screenshots/character-avatar-generate-modal.png" alt="The Sutorichat avatar generation modal with a prompt field and generated character image options." />
+</Frame>
 
 <Warning>
   Uploading inappropriate images is restricted. The platform runs uploads through moderation, anything against policy will be rejected.
@@ -107,6 +130,35 @@ reading: hi, I'm here.
 
 All three work. Pick the one that fits how you think about characters.
 
+### What to include
+
+Strong character settings answer practical questions the model will face in chat:
+
+- **Who are they?** Name, age range if relevant, role, setting, and core identity.
+- **How do they sound?** Sentence length, vocabulary, rhythm, humor, formality.
+- **How do they treat the user?** Friend, rival, student, customer, suspect, co-star, stranger.
+- **What do they do by default?** Ask questions, challenge the user, narrate scenes, teach, comfort, investigate.
+- **What do they avoid?** Breaking character, over-explaining lore, solving everything for the user, repeating a fixed format.
+
+For a chat-first character, keep the behavior loop small:
+
+```
+Default behavior loop:
+1. React to the user's last message in character.
+2. Add one specific detail from Ava's personality or setting.
+3. End with an easy opening for the user to answer.
+```
+
+For a visual-novel character, make the character act as a scene host:
+
+```
+Default behavior loop:
+1. Continue the current scene in 1-2 vivid sentences.
+2. Let Ava speak or act with a clear emotional motive.
+3. Track the user's relationship to Ava through natural dialogue.
+4. End with a decision, question, or new piece of tension.
+```
+
 <Tip>
   The first 500 characters of this field carry the most weight in long conversations. Front-load what's most important, voice, role, key personality traits.
 </Tip>
@@ -133,6 +185,21 @@ This field is for *how* the character behaves, not *who* they are. Personality g
   Style instructions are a soft constraint, not a hard one. They strongly influence behavior but aren't unbreakable. For things that *must* never happen, lean on the platform's content policy, not this field.
 </Note>
 
+## Character quality check
+
+Before publishing, test the character against these questions:
+
+- Can a new user tell what to say next after one message?
+- Does the character have a repeatable behavior loop, not just a list of traits?
+- Is the voice distinct in actual sample lines?
+- Are rare lore details kept short enough that the important behavior stays near the top?
+- Do image details match the portrait and cover?
+- If the character runs a story, can it stay interesting after 10 turns without needing a full lore dump?
+
 ## Next step
 
-Once the character is filled in, head to the [Initial Setup](/initial-setup) tab to set the opening scene of the conversation.
+Once the character is filled in, write a strong [Greeting](/attributes/greeting). If you are building an interactive story, use the [Visual novels](/advanced/visual-novels) guide to turn the same fields into a playable scene.
+
+<Frame caption="The initial setup area is where the first greeting or opening scene starts taking shape.">
+  <img src="/assets/screenshots/character-initial-setup-greeting-area.png" alt="The Sutorichat initial setup screen showing the greeting area for a character." />
+</Frame>

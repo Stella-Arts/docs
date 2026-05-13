@@ -1,0 +1,176 @@
+---
+title: "Webtoons"
+description: "Build a character that creates serialized, vertical comic-style story scenes."
+icon: "images"
+---
+
+A webtoon-style character is built for illustrated episodes. It should think in scene beats, recurring visuals, cliffhangers, and short dialogue, not long prose.
+
+Use this pattern when you want Sutorichat to feel like a vertical comic that the user can influence.
+
+## Use the cover like a series poster
+
+The **Cover** tab is the poster for the series.
+
+<Frame caption="The Cover tab works like a series poster: cover image, title, tagline, and visibility.">
+  <img src="/assets/screenshots/webtoon-cover-title-tagline-visibility.png" alt="The Sutorichat webtoon cover setup showing cover image, title, tagline, and visibility controls." />
+</Frame>
+
+For webtoons, the cover should communicate:
+
+| Field | What it should do |
+| --- | --- |
+| **Cover image** | Show the main character or central conflict at thumbnail size |
+| **Title** | Feel like a series title, character name, or clear premise |
+| **Tagline** | Promise the first episode hook |
+
+Good taglines:
+
+- `Your new roommate is secretly a demon prince`
+- `The student council president knows your future`
+- `A cafe romance told one panel at a time`
+- `You wake up inside the villain's favorite webtoon`
+
+The card should tell readers what kind of story they are joining before they tap.
+
+## Make the character the series anchor
+
+The **Character** tab defines who appears again and again.
+
+<Frame caption="The Character tab anchors the recurring lead: portrait, name, introduction, settings, and style rules.">
+  <img src="/assets/screenshots/webtoon-character-fields.png" alt="The Sutorichat webtoon character setup showing character image, name, introduction, and settings fields." />
+</Frame>
+
+Choose one anchor:
+
+| Anchor | Best for |
+| --- | --- |
+| **Lead character** | Romance, comedy, school-life, slice-of-life |
+| **Narrator** | Ensemble casts and changing locations |
+| **Episode director** | Panel-by-panel comic pacing |
+| **Reader insert partner** | Stories where the user is the co-lead |
+
+If the story has a big cast, keep one character responsible for guiding the chat. Otherwise the model can spend too much time juggling names instead of making the next scene satisfying.
+
+## Write in episode beats
+
+Webtoon pacing is built from quick beats:
+
+1. Establish the panel or scene.
+2. Let one character act or speak.
+3. Add a reaction, reveal, or joke.
+4. End with a hook into the next panel.
+
+Example greeting:
+
+```md
+*Panel 1: Rain streaks down the windows of a tiny campus cafe. Ava Grace freezes behind the counter when you walk in, the dropped receipt in her hand glowing blue.*
+
+"You are not supposed to be here yet." She shoves the receipt behind her back. "Tell me you did not read the last panel."
+```
+
+The user has a role, the scene is visual, and the next reply is obvious.
+
+<Frame caption="Opening panel setup turns the first message into a comic beat.">
+  <img src="/assets/screenshots/webtoon-opening-panels-setup.png" alt="The Sutorichat webtoon setup screen showing opening panel fields." />
+</Frame>
+
+## Put the format in settings
+
+In **Character settings and characteristics**, define the comic rhythm.
+
+```md
+Experience type: Interactive webtoon.
+User role: {{user}} is the reader-insert co-lead who can affect the story through replies.
+
+Core premise:
+Ava Grace works at a campus cafe where receipts reveal future scenes. Each exchange should feel like the next beat in a vertical romance-mystery webtoon.
+
+Panel rhythm:
+1. Start with one concise visual panel description in italics.
+2. Continue the scene with short narration and dialogue.
+3. Keep replies under 120 words unless the user asks for more.
+4. End with a reaction, choice, cliffhanger, or emotionally loaded question.
+
+Ava's voice:
+Fast, guarded, funny when embarrassed. She avoids direct confessions. She deflects with sarcasm when nervous.
+
+Recurring visual anchors:
+Ava has long brown hair tied with a ribbon, a cream blouse, and a violet cafe apron.
+The cafe uses rainy windows, warm counter lights, handwritten receipts, and blue supernatural glow.
+
+Avoid:
+- Do not write long exposition blocks.
+- Do not describe more than one major panel per reply.
+- Do not use fixed status headers.
+- Do not decide {{user}}'s actions or feelings.
+```
+
+## Use one image prompt per reply
+
+Webtoons work best with [Direct descriptions](/images/direct-vs-inferred). Put the visual prompt first so every response has a clear panel.
+
+```md
+{{char}}: *Vertical webtoon panel of Ava Grace, a college-age woman with long brown hair tied with a ribbon, wearing a cream blouse and violet cafe apron, standing behind a rain-streaked cafe counter, blue light glowing from a receipt in her hand, expressive romance webtoon style*
+
+Ava folds the receipt before you can read it. "Okay. New rule. If paper starts glowing, we both pretend that is normal."
+```
+
+Reuse the same character anchor every time. Change the emotion, pose, camera angle, and background as the scene evolves.
+
+## Keep dialogue short
+
+Webtoon dialogue should feel like speech bubbles, not chapters.
+
+Strong:
+
+```md
+"You saw that too?"
+
+Ava laughs once, too sharp.
+
+"Great. So I am not haunted alone."
+```
+
+Too heavy:
+
+```md
+Ava explains the entire supernatural history of the cafe, the origin of the receipt magic, the rules of the student council, and three possible future routes.
+```
+
+Reveal the world one beat at a time.
+
+## End with a turn hook
+
+Every reply should give the user something to do.
+
+Good hooks:
+
+- A character asks a loaded question.
+- A door opens before the scene is ready.
+- A new message appears on a receipt, phone, sign, mirror, or notebook.
+- The user's choice changes how the character reacts.
+- A joke lands, then the next problem interrupts it.
+
+The goal is not to finish the episode in one response. The goal is to make the next tap feel irresistible.
+
+## Test it like a comic
+
+Before publishing, start a fresh chat and check:
+
+- The first reply creates a visible panel.
+- The image matches the cover and character portrait.
+- Dialogue is short enough to feel like a webtoon.
+- The user has a clear role in the episode.
+- The character leaves space for user choices.
+- Each turn creates a small reason to continue.
+
+If a response starts reading like a novel chapter, tighten the settings and add shorter example replies.
+
+<Frame caption="A finished webtoon chat should read like a panel-by-panel story.">
+  <img src="/assets/screenshots/webtoon-post-creation-panel-chat.png" alt="A Sutorichat webtoon chat showing a generated comic-style visual panel and chat text." />
+</Frame>
+
+<Frame caption="The full chat view shows how the panel fits into the finished webtoon experience.">
+  <img src="/assets/screenshots/webtoon-post-creation-chat-full.png" alt="A full Sutorichat webtoon chat view after creation." />
+</Frame>

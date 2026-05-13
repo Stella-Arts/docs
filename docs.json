@@ -18,6 +18,7 @@
             "pages": [
               "index",
               "quickstart",
+              "screenshots",
               "character-profile"
             ]
           },
@@ -48,6 +49,8 @@
               "advanced/overview",
               "advanced/dialog-format",
               "advanced/setting-a-scene",
+              "advanced/visual-novels",
+              "advanced/webtoons",
               "advanced/negative-guidance",
               "advanced/unusual-patterns",
               "advanced/formatting"
