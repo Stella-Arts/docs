@@ -78,15 +78,11 @@
       }
     ]
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:support@sutorichat.com"
+        "href": "mailto:yash@megaphoneteam.com"
       }
     ],
     "primary": {
