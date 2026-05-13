@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Docs",
   "colors": {
-    "primary": "#7C3AED",
-    "light": "#A78BFA",
-    "dark": "#5B21B6"
+    "primary": "#335FFF",
+    "light": "#5C7CFF",
+    "dark": "#2A4FD9"
   },
   "favicon": "/favicon.svg",
   "navigation": {
